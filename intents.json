@@ -1,0 +1,73 @@
+{"intents": [
+    {"tag": "greeting",
+     "patterns": ["Привет", "Как дела?", "Доброе утро","Hey","Hola", "Hello", "Good day"],
+     "responses": ["Здравствуйте!", "Привет!", "Как дела?"],
+     "context": [""]
+    },
+    {"tag": "goodbye",
+     "patterns": ["До свидания", "Пока", "Прощай"],
+     "responses": ["Пока!", "Бай-Бай!", "До свидания!", "Прощайте!"],
+     "context": [""]
+    },
+    {"tag": "thanks",
+     "patterns": ["спасибо", "Благодарю!"],
+     "responses": ["Всегда пожалуйста" ],
+     "context": [""]
+    },
+    {"tag": "noanswer",
+     "patterns": [],
+     "responses": ["Извините, я вас не понимаю "," Пожалуйста, дайте мне больше информации "," Не уверен, что понимаю"],
+     "context": [""]
+    },
+    {"tag": "options",
+     "patterns": ["Что ты можешь сделать?"],
+     "responses": ["Много всего!"],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [""],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [],
+     "responses": [""],
+     "context": [""]
+    },
+    {"tag": "",
+     "patterns": [],
+     "responses": [""],
+     "context": [""]
+    }
+]
+}
