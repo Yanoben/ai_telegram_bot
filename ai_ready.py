@@ -1,14 +1,11 @@
-import os
-import nltk
-from nltk.stem import WordNetLemmatizer
-import pickle
-import numpy as np
-import telebot
-from keras.models import load_model
 import json
+import pickle
 import random
-import logging
-from dotenv import load_dotenv
+
+import nltk
+import numpy as np
+from keras.models import load_model
+from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 
@@ -21,7 +18,8 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
-    sentence_words = [lemmatizer.lemmatize(word.lower()) for word in sentence_words]
+    sentence_words = [lemmatizer.lemmatize(
+        word.lower()) for word in sentence_words]
     return sentence_words
 
 
@@ -59,24 +57,3 @@ def getResponse(ints, intents_json):
             result = random.choice(i['responses'])
             break
     return result
-
-
-load_dotenv()
-token = os.getenv('TOKEN')
-bot = telebot.TeleBot(token)
-
-
-@bot.message_handler(content_types=["text"])
-def repeat_all_messages(message):
-    ints = predict_class(message.text, model)
-    res = getResponse(ints, intents)
-    bot.send_message(message.chat.id, res)
-
-
-if __name__ == '__main__':
-    logging.basicConfig(
-        level=logging.DEBUG,
-        filename='main.log',
-        format='%(asctime)s, %(levelname)s, %(message)s, %(name)s'
-    )
-    bot.infinity_polling()

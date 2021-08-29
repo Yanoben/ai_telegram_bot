@@ -1,12 +1,13 @@
-import nltk
-from nltk.stem import WordNetLemmatizer
 import json
 import pickle
-import numpy as np
-from keras.models import Sequential
-from keras.layers import Dense, Dropout
-from keras.optimizers import SGD
 import random
+
+import nltk
+import numpy as np
+from keras.layers import Dense, Dropout
+from keras.models import Sequential
+from keras.optimizers import SGD
+from nltk.stem import WordNetLemmatizer
 
 nltk.download('punkt')
 nltk.download('wordnet')

@@ -1,6 +1,6 @@
 {"intents": [
     {"tag": "greeting",
-     "patterns": ["Привет", "Как дела?", "Доброе утро","Hey","Hola", "Hello", "Good day"],
+     "patterns": ["Привет", "Доброе утро"],
      "responses": ["Здравствуйте!", "Привет!", "Как дела?"],
      "context": [""]
     },
@@ -11,11 +11,11 @@
     },
     {"tag": "thanks",
      "patterns": ["спасибо", "Благодарю!"],
-     "responses": ["Всегда пожалуйста" ],
+     "responses": ["Всегда пожалуйста", "Не за что!"],
      "context": [""]
     },
     {"tag": "noanswer",
-     "patterns": ["."],
+     "patterns": [" "],
      "responses": ["Извините, я вас не понимаю "," Пожалуйста, дайте мне больше информации "," Не уверен, что понимаю"],
      "context": [""]
     },
@@ -25,13 +25,13 @@
      "context": [""]
     },
     {"tag": "",
-     "patterns": [""],
-     "responses": [""],
+     "patterns": ["Кто Ты Такая?", "Кто ты такой?"],
+     "responses": ["Меня зовут Cee и я Ai Bot"],
      "context": [""]
     },
     {"tag": "",
-     "patterns": [""],
-     "responses": [""],
+     "patterns": ["Как дела?", "Хорошо"],
+     "responses": ["Супер!"],
      "context": [""]
     },
     {"tag": "",
