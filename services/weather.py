@@ -1,7 +1,7 @@
 import requests
 
 
-def what_weather(city):
+def get_weather(city):
     url = f'http://wttr.in/{city}'
     weather_parameters = {
         'format': 2,
